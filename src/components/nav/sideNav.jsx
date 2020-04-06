@@ -40,8 +40,8 @@ export default function SideNav() {
         },
         {
             season: 2,
-            episode: 3,
-            title: "Episode 3 Title",
+            episode: 4,
+            title: "Episode 4 Title",
             summary: "This is a summary",
             date: "April 1997",
             teams: {
@@ -60,7 +60,7 @@ export default function SideNav() {
             season: 2,
             episode: 5,
             title: "Episode 5 Title",
-            summary: "This is a summary",
+            summary: "This is a summary. \n Totally a summary",
             date: "April 1997",
             teams: {
                 ash: {
@@ -78,16 +78,27 @@ export default function SideNav() {
 
 
     const readout = list.map((data) => {
+        // let newData = data.summary.split("\n ")
+                    // console.log(newData)
         return (
 
-            <div>
+            <div key={data.title}>
                 <br />
-                {data.title} - {data.summary}
+                <h2 className="episodeTitle">S{data.season} EP{data.episode}: {data.title}</h2> <br />
+                <h4 className="episodeDate">Approximate Date: {data.date}</h4>
+                 
+                {/* {newData.map((x) => {
+                    return (
+                        <p>{x}</p>
+                    )
+                },'')
+                } */}
+                <hr/>
             </div>
         )
     })
     return (
-        <div>
+        <div className="sideNavBar">
             {readout}
         </div>
     )
