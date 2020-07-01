@@ -2,20 +2,16 @@ import React, { Component } from 'react';
 import './App.css';
 import TopNav from './components/nav/topNav'
 import SideNav from './components/nav/sideNav';
+import MainBody from './components/mainBody';
 
-class App extends Component {
-  componentDidMount(){
-    
-  }
-  render() {
+export default function App(){
+  
     return (
       <div className="App">
-        <TopNav />
+        {/* <TopNav /> */}
         <SideNav />
-        Hello
+        <MainBody />
       </div>
     );
-  }
+  
 }
-
-export default App;

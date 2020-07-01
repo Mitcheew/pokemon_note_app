@@ -86,13 +86,6 @@ export default function SideNav() {
                 <br />
                 <h2 className="episodeTitle">S{data.season} EP{data.episode}: {data.title}</h2> <br />
                 <h4 className="episodeDate">Approximate Date: {data.date}</h4>
-                 
-                {/* {newData.map((x) => {
-                    return (
-                        <p>{x}</p>
-                    )
-                },'')
-                } */}
                 <hr/>
             </div>
         )
