@@ -17,9 +17,11 @@ export default function App() {
         teams:
           [{
             trainer: "Ash Ketchum",
+            gender: "Male",
             pokemon: [
               {
                 name: "Pikachu",
+                gender: "Male",
                 type: "Electric",
                 moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
               }
@@ -36,16 +38,37 @@ export default function App() {
         teams:
           [{
             trainer: "Ash Ketchum",
+            gender: "Male",
             pokemon: [
               {
                 name: "Pikachu",
+                gender: "Male",
                 type: "Electric",
                 moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
               },
               {
                 name: "Caterpie",
+                gender: "Male",
                 type: "Bug",
                 moves: ["tackle", "string shot", "bug bite"]
+              }
+            ]
+          },
+          {
+            trainer: "Misty Waterflower",
+            gender: "Female",
+            pokemon: [
+              {
+                name: "Staryu",
+                gender: "N/A",
+                type: "Water",
+                moves: ["water gun", "rapid spin", "swift", "recover"]
+              },
+              {
+                name: "Goldeen",
+                gender: "Female",
+                type: "Water",
+                moves: ["tackle", "horn attack", "splash"]
               }
             ]
           }
@@ -58,16 +81,42 @@ export default function App() {
         summary: "This is a summary",
         date: "April 1997",
         teams: [{
-          Ash: {
-            pokemon: {
-              Pikachu: {
-                gender: "M",
-                type: "Electric",
-                moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
-              }
+          trainer: "Ash Ketchum",
+          gender: "Male",
+          pokemon: [
+            {
+              name: "Pikachu",
+              gender: "Male",
+              type: "Electric",
+              moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
+            },
+            {
+              name: "Caterpie",
+              gender: "Male",
+              type: "Bug",
+              moves: ["tackle", "string shot", "bug bite"]
             }
-          }
-        }]
+          ]
+        },
+        {
+          trainer: "Misty Waterflower",
+          gender: "Female",
+          pokemon: [
+            {
+              name: "Staryu",
+              gender: "N/A",
+              type: "Water",
+              moves: ["water gun", "rapid spin", "swift", "recover"]
+            },
+            {
+              name: "Goldeen",
+              gender: "Female",
+              type: "Water",
+              moves: ["tackle", "horn attack", "splash"]
+            }
+          ]
+        }
+        ]
       },
       {
         season: 2,
@@ -76,16 +125,42 @@ export default function App() {
         summary: "This is a summary. \n Totally a summary",
         date: "April 1997",
         teams: [{
-          Ash: {
-            pokemon: {
-              Pikachu: {
-                gender: "M",
-                type: "Electric",
-                moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
-              }
+          trainer: "Ash Ketchum",
+          gender: "Male",
+          pokemon: [
+            {
+              name: "Pikachu",
+              gender: "Male",
+              type: "Electric",
+              moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
+            },
+            {
+              name: "Caterpie",
+              gender: "Male",
+              type: "Bug",
+              moves: ["tackle", "string shot", "bug bite"]
             }
-          }
-        }]
+          ]
+        },
+        {
+          trainer: "Misty Waterflower",
+          gender: "Female",
+          pokemon: [
+            {
+              name: "Staryu",
+              gender: "N/A",
+              type: "Water",
+              moves: ["water gun", "rapid spin", "swift", "recover"]
+            },
+            {
+              name: "Goldeen",
+              gender: "Female",
+              type: "Water",
+              moves: ["tackle", "horn attack", "splash"]
+            }
+          ]
+        }
+        ]
       },
     ]
   );

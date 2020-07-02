@@ -20,13 +20,13 @@ export default function MainBody(props) {
                                 list.teams.map((x, i) => {
                                     return (
                                         <div key={i + x.trainer}>
-                                            <h1>{x.trainer}</h1>
+                                            <h1>{x.trainer} ({x.gender})</h1>
                                             Pokemon:
                                 {
                                                 x.pokemon.map((p, i) => {
                                                     return (
                                                         <div key={i + p.name}>
-                                                            <h2>Name: {p.name}</h2>
+                                                            <h2>Name: {p.name} ({p.gender})</h2>
                                                             <h3>Type: {p.type}</h3>
                                                             <h4>Moves: {
                                                                 p.moves.map((m, i) => `${m}, `)
@@ -41,7 +41,6 @@ export default function MainBody(props) {
 
                             }
                         </div>
-                        <hr />
                     </div>
             }
         </div>
