@@ -14,17 +14,18 @@ export default function App() {
         title: "Pokemon I Choose You!",
         summary: "This is a summary",
         date: "April 1997",
-        teams: {
-          ash: {
-            pokemon: {
-              pikachu: {
-                gender: "Male",
+        teams:
+          [{
+            trainer: "Ash Ketchum",
+            pokemon: [
+              {
+                name: "Pikachu",
                 type: "Electric",
                 moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
               }
-            }
+            ]
           }
-        }
+          ]
       },
       {
         season: 1,
@@ -32,17 +33,23 @@ export default function App() {
         title: "Episode 3 Title",
         summary: "This is a summary 2",
         date: "May 1997",
-        teams: {
-          ash: {
-            pokemon: {
-              pikachu: {
-                gender: "Male",
+        teams:
+          [{
+            trainer: "Ash Ketchum",
+            pokemon: [
+              {
+                name: "Pikachu",
                 type: "Electric",
                 moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
+              },
+              {
+                name: "Caterpie",
+                type: "Bug",
+                moves: ["tackle", "string shot", "bug bite"]
               }
-            }
+            ]
           }
-        }
+          ]
       },
       {
         season: 2,
@@ -50,17 +57,17 @@ export default function App() {
         title: "Episode 4 Title",
         summary: "This is a summary",
         date: "April 1997",
-        teams: {
-          ash: {
+        teams: [{
+          Ash: {
             pokemon: {
-              pikachu: {
-                gender: "Male",
+              Pikachu: {
+                gender: "M",
                 type: "Electric",
                 moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
               }
             }
           }
-        }
+        }]
       },
       {
         season: 2,
@@ -68,17 +75,17 @@ export default function App() {
         title: "Episode 5 Title",
         summary: "This is a summary. \n Totally a summary",
         date: "April 1997",
-        teams: {
-          ash: {
+        teams: [{
+          Ash: {
             pokemon: {
-              pikachu: {
-                gender: "Male",
+              Pikachu: {
+                gender: "M",
                 type: "Electric",
                 moves: ["thundershock", "thunderbolt", "quick attack", "agility"]
               }
             }
           }
-        }
+        }]
       },
     ]
   );
@@ -86,7 +93,7 @@ export default function App() {
     <div className="App">
       {/* <TopNav /> */}
       <SideNav list={list} setSelection={setSelection} />
-      <MainBody list={list[selection]} setList={setList}/>
+      <MainBody list={list[selection]} setList={setList} />
     </div>
   );
 
