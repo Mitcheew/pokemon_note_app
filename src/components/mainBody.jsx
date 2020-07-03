@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 export default function MainBody(props) {
     let { list, setList } = props;
+    let [ editMode, setEditMode ] = useState(false);
     return (
         <div className="mainBody">
             {
@@ -9,6 +10,8 @@ export default function MainBody(props) {
                     ?
                     <h1>Select an item on the left to see more detailed information</h1>
                     :
+                    !editMode
+                    ?
                     <div>
                         <br />
                         <h2 className="episodeTitle">S{list.season} EP{list.episode}: {list.title}</h2> <br />
@@ -29,7 +32,7 @@ export default function MainBody(props) {
                                                             <h2>Name: {p.name} ({p.gender})</h2>
                                                             <h3>Type: {p.type}</h3>
                                                             <h4>Moves: {
-                                                                p.moves.map((m, i) => `${m}, `)
+                                                                p.moves.map((m, i) => i+1 < p.moves.length ? `${m}, ` : `${m}`)
                                                             }</h4>
                                                         </div>
                                                     )
@@ -41,6 +44,12 @@ export default function MainBody(props) {
 
                             }
                         </div>
+                        <button onClick={() => setEditMode(true)}>Edit</button>
+                    </div>
+                    :
+                    <div>
+                        edit mode on
+                        <button onClick={() => setEditMode(false)}>Edit</button>
                     </div>
             }
         </div>
